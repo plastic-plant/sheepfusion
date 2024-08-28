@@ -1,0 +1,11 @@
+# Unzip sheepsnapshotmodel.ckpt from split archive with 7-zip.org
+
+7z.exe e sheepsnapshotmodel.7z.001
+
+
+# Convert Stable Diffusion checkpoint model (.ckpt) to Diffusers model, then to ONNX with Diffusers scripts.
+
+git clone https://github.com/huggingface/diffusers/tree/main/scripts
+
+python convert_original_stable_diffusion_to_diffusers.py --checkpoint_path="./model/sheepsnapshotmodel.ckpt" --dump_path="./model/diffusers"
+python convert_stable_diffusion_checkpoint_to_onnx.py --model_path="./model/diffusers" --output_path="model/onnx"
