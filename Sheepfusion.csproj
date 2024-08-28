@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.DirectML" Version="1.19.1" /> <!-- Cuda, etc. -->
+    <PackageReference Include="OnnxStack.Core" Version="0.39.0" />
+    <PackageReference Include="OnnxStack.StableDiffusion" Version="0.39.0" />
+  </ItemGroup>
+
+</Project>
